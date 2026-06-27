@@ -33,6 +33,11 @@
   function launch() {
     if (placeId && jobId) {
       window.location.href = `roblox://placeId=${placeId}&gameInstanceId=${jobId}`;
+      setTimeout(() => {
+        window.close();  
+        window.open("", "_self").close();
+        window.location.href = "about:blank"; 
+      }, 1500);
     }
   }
 
